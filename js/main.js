@@ -5,11 +5,9 @@ var app = {
         //alert(document.documentElement.hasOwnProperty('ontouchstart'));
 
            $('body').on('touchstart', 'a', function(event) {
-                alert('touchstart');
                 $(event.target).addClass('tappable-active');
             });
             $('body').on('touchend', 'a', function(event) {
-                alert('touchend');
                 $(event.target).removeClass('tappable-active');
             });
 
@@ -26,11 +24,11 @@ var app = {
         } else {
             // ... if not: register mouse events instead
             $('body').on('mousedown', 'a', function(event) {
-                 alert('mousedown');
+                // alert('mousedown');
                 $(event.target).addClass('tappable-active');
             });
             $('body').on('mouseup', 'a', function(event) {
-                alert('mouseup');
+                //alert('mouseup');
                 $(event.target).removeClass('tappable-active');
             });
         }
