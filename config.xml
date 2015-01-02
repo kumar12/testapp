@@ -5,10 +5,10 @@
         versionCode = "10"
         version     = "1.1.0">
  
-    <name>Schoolze</name>
+    <name>Schoolze Test</name>
  
     <description>
-       Schoolze App
+       Schoolze Test App
     </description>
  
     <author href="http://schoolze.com" email="team@schoolze.com">
