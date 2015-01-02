@@ -4,12 +4,21 @@ var app = {
         // Check of browser supports touch events...
         //alert(document.documentElement.hasOwnProperty('ontouchstart'));
 
-           $('body').on('touchstart', 'a', function(event) {
-                $(event.target).addClass('tappable-active');
-            });
-            $('body').on('touchend', 'a', function(event) {
-                $(event.target).removeClass('tappable-active');
-            });
+        if ("ontouchstart" in document.documentElement)
+        {
+          alert('iphone');
+        }
+        else
+        {
+         alert('pc');
+        } 
+
+           // $('body').on('touchstart', 'a', function(event) {
+           //      $(event.target).addClass('tappable-active');
+           //  });
+           //  $('body').on('touchend', 'a', function(event) {
+           //      $(event.target).removeClass('tappable-active');
+           //  });
 
         if (document.documentElement.hasOwnProperty('ontouchstart')) {
             // ... if yes: register touch event listener to change the "selected" state of the item
