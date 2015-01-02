@@ -2,7 +2,7 @@ var app = {
    registerEvents: function() {
         var self = this;
         // Check of browser supports touch events...
-        alert(document.documentElement.hasOwnProperty('ontouchstart'));
+        //alert(document.documentElement.hasOwnProperty('ontouchstart'));
 
            $('body').on('touchstart', 'a', function(event) {
                 alert('touchstart');
@@ -12,17 +12,17 @@ var app = {
                 alert('touchend');
                 $(event.target).removeClass('tappable-active');
             });
-            
+
         if (document.documentElement.hasOwnProperty('ontouchstart')) {
             // ... if yes: register touch event listener to change the "selected" state of the item
-            $('body').on('touchstart', 'a', function(event) {
-                alert('touchstart');
-                $(event.target).addClass('tappable-active');
-            });
-            $('body').on('touchend', 'a', function(event) {
-                alert('touchend');
-                $(event.target).removeClass('tappable-active');
-            });
+            // $('body').on('touchstart', 'a', function(event) {
+            //     alert('touchstart');
+            //     $(event.target).addClass('tappable-active');
+            // });
+            // $('body').on('touchend', 'a', function(event) {
+            //     alert('touchend');
+            //     $(event.target).removeClass('tappable-active');
+            // });
         } else {
             // ... if not: register mouse events instead
             $('body').on('mousedown', 'a', function(event) {
